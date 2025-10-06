@@ -1,0 +1,17 @@
+[package]
+    edition = "2021"
+    name    = "rm-referee-protocol-py"
+    version = "0.1.0"
+
+[lib]
+    crate-type = ["cdylib"]
+    name       = "rm_referee_protocol_py"
+
+[dependencies]
+    deku = "*"
+    pyo3 = { version = "0.26.0", features = ["serde"] }
+    pythonize = "0.26.0"
+    rm-referee-protocol = { git = "https://github.com/EzekielDaun/rm-referee-protocol.git", features = [
+        "serde",
+    ] }
+    serde = { version = "1.*", features = ["derive"] }
